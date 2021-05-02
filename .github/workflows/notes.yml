@@ -1,0 +1,20 @@
+name: Weekly Notes Generator
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notes-gen:
+    runs-on: ubuntu-latest
+    container:
+      image: pandoc/latex
+      options: --entrypoint /bin/bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Generate Weekly Summery
+        run : |
+          echo "Hello World!"
