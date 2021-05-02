@@ -3,7 +3,7 @@ name: Weekly Notes Generator
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   notes-gen:
