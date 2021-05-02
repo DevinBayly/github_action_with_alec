@@ -3,7 +3,7 @@ name: Weekly Notes Generator
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   notes-gen:
@@ -17,4 +17,4 @@ jobs:
 
       - name: Generate Weekly Summery
         run : |
-          echo "Hello World!"
+          pandoc readme.md -o readme.pdf
