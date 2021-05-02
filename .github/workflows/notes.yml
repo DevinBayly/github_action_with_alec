@@ -15,6 +15,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Generate Weekly Summery
+      - name: Generate Weekly Summary
         run : |
           pandoc readme.md -o readme.pdf
+
+      - name: Commit pdf to repo
+        run : |
+          git status
+          
+
