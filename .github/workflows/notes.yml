@@ -27,6 +27,7 @@ jobs:
         
   notes-commit:
     runs-on: ubuntu-latest
+    needs: notes-gen
     steps:
       - name: Download Generated PDF
         uses: actions/download-artifact@v2
